@@ -1,1 +1,1 @@
-# Prototype-Farhschule-Website
+# Farhschule Website
