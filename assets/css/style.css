@@ -1436,7 +1436,7 @@ h5 a:hover { color: inherit; }
 /* Slimmer chatbox wrapper */
 #n8n-chat .chat-window-wrapper {
 	width: 300px !important;     /* slimmer width */
-	height: 500px !important;    /* decent height */
+	height: 450px !important;    /* decent height */
 	max-height: 80vh !important; /* responsive */
   }
   
@@ -1528,6 +1528,7 @@ h5 a:hover { color: inherit; }
 #n8n-chat .chat-message-from-bot span,
 #n8n-chat .chat-message-from-bot .chat-message-markdown {
   color: #000 !important;   /* black text */
+  font-size: 12px !important;
 }
 
 /* User message text */
@@ -1535,5 +1536,6 @@ h5 a:hover { color: inherit; }
 #n8n-chat .chat-message-from-user p,
 #n8n-chat .chat-message-from-user span,
 #n8n-chat .chat-message-from-user .chat-message-markdown {
-  color: #000 !important;   /* black text */
+  color: #000 !important; 
+  font-size: 12px !important;  /* black text */
 }
