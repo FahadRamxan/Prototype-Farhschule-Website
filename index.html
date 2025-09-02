@@ -505,5 +505,16 @@
       }
     </script>
 
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet" />
+      <script type="module">
+      import { createChat } from
+      'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        webhookUrl: 'https://brandilyst-ug.app.n8n.cloud/webhook/8f61c22c-0a61-4153-99e6-8f11c336c70d/chat'
+      });
+      </script>
+
   </body>
 </html>
