@@ -1433,31 +1433,49 @@ h5 a:hover { color: inherit; }
   display: none !important;
 }
 
-/* Slimmer chatbox wrapper */
-#n8n-chat .chat-window-wrapper {
-	width: 300px !important;     /* slimmer width */
-	height: 450px !important;    /* decent height */
-	max-height: 80vh !important; /* responsive */
-  }
-  
  
 
   /* Always fix chatbox itself slightly above toggle */
-#n8n-chat .chat-window-wrapper {
+/* #n8n-chat .chat-window-wrapper {
 	position: fixed !important;
-	bottom: 80px !important;   /* ✅ keeps chatbox above the toggle */
+	bottom: 80px !important;   
 	right: 20px !important;
 	z-index: 9998 !important;
+	width: 300px !important;     
+	height: 450px !important;   
+	max-height: 80vh !important; 
+  } */
+
+
+  #n8n-chat .chat-window-wrapper {
+	position: fixed !important;
+	bottom: 80px !important;
+	right: 20px !important;        /* stays above toggle button */
+	z-index: 9998 !important;
+
+	width: 300px;
+	height: 450px;
+  
+	resize: both !important;       
+	overflow: hidden !important;
+  
+	min-width: 280px !important;
+	min-height: 400px !important;
+  
+	max-width: 200vw !important;
+	max-height: calc(100vh - 100px) !important;
   }
+  
+
   
   /* Toggle button fixed at bottom */
   #n8n-chat .chat-window-toggle {
 	position: fixed !important;
-	bottom: 20px !important;   /* ✅ stays at very bottom */
+	bottom: 20px !important;   
 	right: 20px !important;
 	z-index: 9999 !important;
   
-	background: #a4c639 !important;  /* green */
+	background: #a4c639 !important;  
 	border-radius: 50% !important;
 	padding: 8px !important;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -1474,7 +1492,7 @@ h5 a:hover { color: inherit; }
 #n8n-chat .chat-message {
 	margin: 5px 0 !important;     
 	padding: 10px 12px !important;
-	border-radius: 4px !important;   /* ✅ Rectangular sharp corners */
+	border-radius: 4px !important;   
 	font-size: 12px !important;
 	line-height: 1.3 !important;
 	word-wrap: break-word !important;
@@ -1486,7 +1504,7 @@ h5 a:hover { color: inherit; }
 	background: #f1f1f1 !important;
 	color: #222 !important;
 	align-self: flex-start !important;
-	border-radius: 4px !important;   /* ✅ rectangular */
+	border-radius: 4px !important;   
   }
   
   /* User message bubble (right side, green, rectangular) */
@@ -1494,7 +1512,7 @@ h5 a:hover { color: inherit; }
 	background: #a4c639 !important;   
 	color: #fff !important;
 	align-self: flex-end !important;
-	border-radius: 4px !important;   /* ✅ rectangular */
+	border-radius: 4px !important;   
 	width: fit-content !important;   
 	max-width: 70% !important;       
 	margin-left: auto !important;    
@@ -1502,22 +1520,22 @@ h5 a:hover { color: inherit; }
 
   /* Make input placeholder smaller */
 #n8n-chat .chat-input textarea::placeholder {
-	font-size: 13px !important;   /* ✅ smaller placeholder text */
+	font-size: 13px !important;   
 	color: #888 !important;  
-	padding-top: 2px !important;     /* optional: lighter grey */
+	padding-top: 2px !important;     
   }
 
   /* User typing text (inside input box) */
 #n8n-chat .chat-input textarea {
-	font-size: 15px !important;   /* ✅ smaller input text */
+	font-size: 15px !important;  
 	line-height: 1.5 !important;
-	color: #000 !important;       /* ✅ black text */
+	color: #000 !important;       
   }
   
   
   /* Send arrow (button icon) color green */
   #n8n-chat .chat-input-send-button svg {
-	fill: #a4c639 !important;     /* ✅ WhatsApp green */
+	fill: #a4c639 !important;    
 	color: #a4c639 !important;
   }
   
@@ -1527,8 +1545,8 @@ h5 a:hover { color: inherit; }
 #n8n-chat .chat-message-from-bot p,
 #n8n-chat .chat-message-from-bot span,
 #n8n-chat .chat-message-from-bot .chat-message-markdown {
-  color: #000 !important;   /* black text */
-  font-size: 12px !important;
+  color: #000 !important;  
+  font-size: 13px !important;
 }
 
 /* User message text */
@@ -1537,5 +1555,6 @@ h5 a:hover { color: inherit; }
 #n8n-chat .chat-message-from-user span,
 #n8n-chat .chat-message-from-user .chat-message-markdown {
   color: #000 !important; 
-  font-size: 12px !important;  /* black text */
+  font-size: 13px !important;  
 }
+
