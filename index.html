@@ -511,9 +511,31 @@
       import { createChat } from
       'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
+      //createChat({
+        //webhookUrl: 'https://brandilyst-ug.app.n8n.cloud/webhook/8f61c22c-0a61-4153-99e6-8f11c336c70d/chat'
+      //});
       createChat({
-        webhookUrl: 'https://brandilyst-ug.app.n8n.cloud/webhook/8f61c22c-0a61-4153-99e6-8f11c336c70d/chat'
+        webhookUrl: "https://brandilyst-ug.app.n8n.cloud/webhook/8f61c22c-0a61-4153-99e6-8f11c336c70d/chat",
+        target: "#n8n-chat",
+        mode: "window",
+        loadPreviousSession: true,
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: "en",
+        initialMessages: [
+          "Halo! 👋",
+          "Mein Name ist Nathan. Wie kann ich Ihnen heute helfen?"
+        ],
+        i18n: {
+          en: {
+            footer: "",
+            getStarted: "New Conversation",
+            inputPlaceholder: "Type your question..",
+          },
+        },
+        enableStreaming: false,
       });
+
       </script>
 
   </body>
